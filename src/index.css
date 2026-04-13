@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Newsreader", serif;
+  --font-sans: "Manrope", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-primary: #8d4d3c;
+  --color-primary-light: #e1927e;
+  --color-background: #fdf8f5;
+  --color-surface: #ffffff;
+  --color-border-muted: #eee5e0;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-slate-900 font-sans;
+  }
+  
+  h1, h2, h3, h4, .font-serif {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
